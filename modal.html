@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Modal</title>
+        <style>
+            .outerModal{
+                background-color: black;
+                opacity: 0.7;
+                width: 100%;
+                height:100%;
+                position: absolute;
+                top:0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .innerModal{
+                background-color: white;
+                height: 300;
+                width:500;
+            }
+            .head{
+                height: 25px;
+                border-bottom: 3px solid lightgray;
+            }
+            .close{
+                height: 100%;
+            }
+            
+        </style>
+    </head>
+    <body>
+        dfdsf
+        <button onclick="show()">show</button>
+        <script>
+          function show(){
+             document.body.innerHTML+=`
+             <div class="outerModal" id="modal">
+            <div class="innerModal">
+            <div class="head">
+             <button class="close" onclick="closeM('modal')">X</button>
+             </div>
+            </div>
+        </div>
+             `
+          }
+          function closeM(id){
+              document.getElementById(id).remove()
+          }
+        </script>
+    </body>
+</html>
